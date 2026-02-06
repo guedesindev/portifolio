@@ -1,0 +1,32 @@
+:root {
+    /* Fontes */
+    --font-display: 'Orbitron';
+    --font-code: 'Code';
+    --font-body: 'Body';
+
+    /* Cores */
+    --background: #030c17;
+    --ghost-white: #F0F6FC;
+    --light-gray: #B0B8C1;
+    --eletric-blue: #00bce2;
+    --cyan-bright: #66cfe1;
+    --lighter-navy: #152A3F;
+    --deep-navy: #0A1F44;
+    --dark-blue-gray: #1A2F4A;
+    --almost-black: #030c17;
+    --success: #00FF88;
+    --warning: #FFB800;
+    --error: #FF3333;
+    --info: #00D9FF;
+
+    --tw-inset-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+    }
+
+    ;
+
+    /* Values */
+    --nav-height: 0.25rem;
+}

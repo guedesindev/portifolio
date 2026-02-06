@@ -1,0 +1,69 @@
+#contato {
+    margin: auto clamp(.5rem, 3vw, 1rem)
+}
+
+.inner-container {
+    padding: auto clamp(2rem, 5vw, 4rem);
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--nav-height)*16);
+    width: 100%;
+    margin: clamp(2rem, 5vw, 4rem) auto;
+}
+
+.p-normal {
+    color: #5c8991;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    max-width: 70ch;
+    min-width: 25ch;
+    font-weight: 300;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    opacity: .75;
+    filter: drop-shadow(0 0 2px var(--dark-blue-gray));
+}
+
+.cards-contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--nav-height)*6);
+    width: min(100% - 2rem, 1200px);
+}
+
+.top,
+.bottom {
+    display: flex;
+    gap: calc(var(--nav-height)*6);
+    width: min(100% - 2rem, 1200px);
+}
+
+
+@media (max-width: 768px) {
+
+    .top,
+    .bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #contato,
+    .inner-container {
+        width: 100%;
+        padding: 0;
+        margin: auto
+    }
+
+    .p-normal {
+        font-size: clamp(0.875rem, 3vw, 1rem);
+    }
+
+    .top,
+    .bottom {
+        flex-direction: column;
+    }
+}

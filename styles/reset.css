@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* outline: 1px solid red; */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

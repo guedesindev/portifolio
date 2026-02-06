@@ -1,0 +1,115 @@
+/* Versão do gradiente backgroudn (sem animação) */
+/*
+.sections-gradient {
+    position: relative;
+    background: linear-gradient(135deg, #1A2F4A 0%, #0A1F44 100%);
+    padding: 128px 64px;
+    overflow: hidden;
+}
+*/
+/** Grid Pattern */
+/*
+.sections-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(#00D9FF20 1px, transparent 1px),
+        linear-gradient(90deg, #00D9FF20 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none
+}
+*/
+/* Conteúdo fica acima do grid*/
+/*
+.sections-content {
+    position: relative;
+    z-index: 1;
+}
+
+*/
+/* Fim da versão sem animção */
+
+
+
+.main {
+    position: relative;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    font-family: var(--font-secundaria);
+}
+
+/* Background gradiente com animação */
+.sections-gradient {
+    position: relative;
+    /* background: linear-gradient(135deg, var(--background) 0%, var(--background) 100%); */
+    background: #000;
+    padding: 128px 64px;
+    overflow: hidden;
+}
+
+/* Grid Pattern com Animação*/
+.sections-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(#00d9ff30 1px, transparent 1px),
+        linear-gradient(90deg, #00d9ff30 1px, transparent 1px);
+    background-size: 50px 50px;
+    box-shadow: inset 0 0 100px rgba(0, 217, 255, 0, 1);
+    animation: grid-pulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes grid-pulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.section-solid {}
+
+/* Conteúdo fica acima do grid */
+.sections-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+
+    .sections-gradient {
+        padding: 96px 48px
+    }
+
+    sections-gradient::before {
+        background-size: 40px 40px
+    }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+
+    .sections-gradient {
+        padding: 64px 32px
+    }
+
+    .sections-gradient::before {
+        background-size: 30px 30px
+    }
+}

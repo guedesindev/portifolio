@@ -1,0 +1,83 @@
+/* SKILLS */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.6rem;
+    padding-inline: clamp(1rem, 5vw, 3rem);
+    padding-block: clamp(1rem, 5vw, 3rem);
+}
+
+.tecnologies-container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.skills-progress-item {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem
+}
+
+.left,
+.right {
+    width: 100%;
+}
+
+
+.tecnology {
+    color: var(--ghost-white);
+    text-transform: uppercase;
+    font-family: var(--font-display);
+}
+
+.percentage {
+    color: var(--eletric-blue);
+    font-family: var(--font-code);
+}
+
+.bar-progress {
+    width: 100%;
+    border: 1px solid var(--cyan-bright);
+    height: 1rem;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--eletric-blue);
+}
+
+.skills-progress-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 769px) {
+
+    .skills-container,
+    .interesses {
+        width: 100%;
+    }
+}
+
+@media (max-width: 426px) {
+    .skills-container {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tecnologies-container {
+        flex-direction: column;
+    }
+
+}

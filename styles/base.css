@@ -1,0 +1,98 @@
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+}
+
+h1 {
+    line-height: 1.1em;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 7rem)
+}
+
+h2 {
+    position: relative;
+    line-height: 1.1em;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 4em);
+    color: var(--ghost-white);
+    padding-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+    width: 4ch;
+    /* largura da linha 4 caracteres*/
+    height: 4px;
+    background-color: var(--eletric-blue);
+}
+
+h3 {
+    line-height: 1.08em;
+    font-weight: 700;
+    font-size: clamp(.9rem, 2vw, 1.5rem);
+}
+
+.label {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.875em
+}
+
+p,
+.small,
+.short-small,
+.code {
+    font-family: var(--font-body);
+}
+
+p,
+.small,
+.short-small {
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 1.6em;
+}
+
+.small {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.short-small {
+    font-size: .875em;
+    line-height: 1.4em;
+}
+
+.code {
+    font-weight: 500;
+    line-height: 1.6em;
+}
+
+.glow {
+    text-shadow: 0 0 1rem rgba(0, 217, 255, .5), 0 0 1.2rem var(--ghost-white);
+}
+
+.highlight {
+    color: var(--cyan-bright);
+    font-family: var(--font-body);
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(0.75rem);
+    --webkit-backdrop-filter: blur(0.75rem);
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {}
+
+/* Mobile */
+@media (max-width: 425px) {}
