@@ -29,6 +29,7 @@ const response = await octokit.request('GET /users/{username}/repos', {
 const projetos_relevantes = ['tic-tac-toe', 'Desistalador-inteligente-Python', 'ai_tutor_forge', 'treinador']
 let projetos = {};
 const projetos_in_cards = []
+const BASE_PATH = window.location.hostname === 'localhost' ? '' : '/portifolio'
 
 Object(response.data).forEach(project => {
     if (projetos_relevantes.includes(project.name)) {
@@ -36,7 +37,7 @@ Object(response.data).forEach(project => {
         projetos["description"] = project.description;
         projetos["html_url"] = project.html_url;
         projetos["stars"] = project.stargazers_count;
-        projetos["image"] = "../assets/images/project-" + project.name + ".png";
+        projetos["image"] = `${BASE_PATH}/assets/images/project-${project.name}.png`;
         projetos_in_cards.push(projetos);
         projetos = {}
     }
