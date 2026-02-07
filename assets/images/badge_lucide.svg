@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="113" height="28" role="img" aria-label="LUCIDE">
+    <title>LUCIDE</title>
+    <g shape-rendering="crispEdges">
+        <rect width="113" height="28" fill="#565656" rx="0"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="10" font-weight="bold">
+        <image x="10" y="4.0" width="20" height="20" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGlkPSJsdWNpZGUtbG9nbyI+CiAgICA8cGF0aCBkPSJNMTQgMTJDMTQgOS43OTA4NiAxMi4yMDkxIDggMTAgOEM3Ljc5MDg2IDggNiA5Ljc5MDg2IDYgMTJDNiAxNi40MTgzIDkuNTgxNzIgMjAgMTQgMjBDMTguNDE4MyAyMCAyMiAxNi40MTgzIDIyIDEyQzIyIDguNDQ2IDIwLjQ1NSA1LjI1Mjg1IDE4IDMuMDU1NTciIHN0cm9rZT0iIzJEMzc0OCIvPgogICAgPHBhdGggZD0iTTEwIDEyQzEwIDE0LjIwOTEgMTEuNzkwOSAxNiAxNCAxNkMxNi4yMDkxIDE2IDE4IDE0LjIwOTEgMTggMTJDMTggNy41ODE3MiAxNC40MTgzIDQgMTAgNEM1LjU4MTcyIDQgMiA3LjU4MTcyIDIgMTJDMiAxNS41ODQxIDMuNTcxMjcgMTguODAxMiA2LjA2MjUzIDIxIiBzdHJva2U9IiNGNTY1NjUiLz4KPC9zdmc+"/>
+        <text x="76.5" y="18.0" fill="#fff" textLength="53">LUCIDE</text>
+    </g>
+</svg>
