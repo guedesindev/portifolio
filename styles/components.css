@@ -277,34 +277,6 @@
     transition: 0.3s ease;
 }
 
-.donwload:hover {
-    text-transform: uppercase;
-    letter-spacing: .5px;
-}
-
-.donwload::before {
-    content: ">";
-    position: absolute;
-    left: -1.2ch;
-    color: var(--eletric-blue);
-    transition: .3s ease;
-}
-
-.donwload::after {
-    content: "<";
-    position: absolute;
-    color: var(--eletric-blue);
-    transition: .3s ease;
-}
-
-.donwload:hover::before {
-    transform: rotateZ(180deg)
-}
-
-.donwload:hover::after {
-    transform: rotateZ(-180deg)
-}
-
 
 /* Tablet */
 @media (max-width: 769px) {
