@@ -99,6 +99,10 @@
     transition: all 3s ease-in-out;
 }
 
+.github a {
+    color: var(--ghost-white)
+}
+
 .card:hover .github {
     background: #1A2F4A25;
 
