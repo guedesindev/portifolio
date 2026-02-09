@@ -4,6 +4,7 @@
 @import url("./base.css");
 @import url("./layout.css");
 @import url("./components.css");
+@import url('./sections/header.css');
 @import url("./sections/sections.css");
 @import url("./sections/hero.css");
 @import url("./sections/sobre.css");
