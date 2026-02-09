@@ -43,6 +43,10 @@
     font-family: var(--font-secundaria);
 }
 
+.section-title {
+    text-transform: uppercase;
+}
+
 /* Background gradiente com animação */
 .sections-gradient {
     position: relative;
