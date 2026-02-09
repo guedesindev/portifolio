@@ -81,7 +81,7 @@ header {
 .nav-links li a {
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--eletric-blue);
+    color: var(--ghost-white);
     letter-spacing: .1rem;
     cursor: pointer;
     position: relative;
@@ -101,6 +101,7 @@ header {
     top: 0;
     font-weight: 700;
     text-shadow: 0 0 1.25rem #F0F6F0;
+    color: var(--eletric-blue);
 }
 
 @media (max-width: 768px) {
