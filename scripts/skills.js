@@ -1,4 +1,4 @@
-import { skills, redes, projetos_in_cards } from './bases.js'
+import { skills, redes, projetos_in_cards, BASE_PATH } from './bases.js'
 
 const tags = document.querySelector('.tags')
 const middleIndex = Math.ceil(skills.length / 2)
@@ -12,7 +12,7 @@ btnVerProjetos.href = '#projetos'
 
 const btnsCurriculo = document.querySelectorAll('.donwload')
 btnsCurriculo.forEach(btn => {
-    btn.href = "../assets/CV.pdf"
+    btn.href = `${BASE_PATH}/assets/CV.pdf`
     btn.download = 'curriculo_fernando_guedes.pdf'
 })
 
@@ -100,14 +100,14 @@ function buscarIcones(icon) {
 function configuracaoLink(link) {
     let link_array = link.split('/')
     if (link_array[link_array.length - 1].includes('@')) {
-        return `/${link_array[0].split('@')[0]}`
+        return `/ ${link_array[0].split('@')[0]} `
     } else {
-        return `/${link_array[link_array.length - 1]}`
+        return `/ ${link_array[link_array.length - 1]} `
     }
 }
 
 function resolveHref(rede) {
-    if (rede.tipo === 'email') return `mailto:${rede.link}`
+    if (rede.tipo === 'email') return `mailto:${rede.link} `
     return rede.link
 }
 
@@ -146,7 +146,7 @@ function createCard(rede) {
     card.appendChild(card_redes_texts)
 
     let external_icon = document.createElement('img')
-    external_icon.src = "../assets/images/external-icon.svg"
+    external_icon.src = `${BASE_PATH}/assets/images/external-icon.svg`
     external_icon.alt = "Ícone de link externo"
     external_icon.width = 16
     external_icon.height = 16
@@ -192,7 +192,7 @@ redes.forEach((rede) => {
 })
 
 /* Adicionar ícone de café no texto do rodapé */
-let coffeeIcon = buscarIcones('../assets/images/coffee.svg')
+let coffeeIcon = buscarIcones(`${BASE_PATH}/assets/images/coffee.svg`)
 coffeeIcon.classList.add('coffee-icon')
 let footerText = document.querySelector('.section-content')
 footerText.style.textAlign = 'baseline'
@@ -229,7 +229,7 @@ function createProjectCard(project) {
     header.appendChild(h3)
 
     const availiable = document.createElement('span')
-    availiable.textContent = `⭐${project.stars}`
+    availiable.textContent = `⭐${project.stars} `
     header.appendChild(availiable)
 
     const description = document.createElement('p')
@@ -249,7 +249,7 @@ function createProjectCard(project) {
 
     const githubIcon = document.createElement('img')
     githubIcon.classList.add('icon-svg')
-    githubIcon.src = "../assets/images/github.svg"
+    githubIcon.src = `${BASE_PATH}/assets/images/github.svg`
     githubIcon.alt = "Ícone do Github"
     githubIcon.width = 24
     githubIcon.height = 24
@@ -258,7 +258,7 @@ function createProjectCard(project) {
     label.textContent = 'ver no github'
 
     const externalIcon = document.createElement('img')
-    externalIcon.src = "../assets/images/external-icon.svg"
+    externalIcon.src = `${BASE_PATH}/assets/images/external-icon.svg`
     externalIcon.alt = "Ícone de link externo"
     externalIcon.width = 16
     externalIcon.height = 16
