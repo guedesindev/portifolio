@@ -1,6 +1,8 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
-const BASE_PATH = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '..' : '/portifolio'
+const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+const BASE_PATH = isLocal ? '..' : '/portifolio'
+// const BASE_PATH = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '..' : '/portifolio'
 
 export const skills = [
     { skill: "python", percentage: '85%' },
