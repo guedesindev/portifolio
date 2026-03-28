@@ -100,9 +100,9 @@ function buscarIcones(icon) {
 function configuracaoLink(link) {
     let link_array = link.split('/')
     if (link_array[link_array.length - 1].includes('@')) {
-        return `/ ${link_array[0].split('@')[0]} `
+        return `/${link_array[0].split('@')[0]} `
     } else {
-        return `/ ${link_array[link_array.length - 1]} `
+        return `/${link_array[link_array.length - 1]} `
     }
 }
 
