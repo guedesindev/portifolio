@@ -86,8 +86,11 @@ const bottomRedes = document.querySelector('.bottom')
 
 function buscarIcones(icon) {
 
-    let rede_icon = document.createElement('i')
-    rede_icon.dataset.lucide = icon
+    let rede_icon = document.createElement('img')
+    rede_icon.src = icon
+    rede_icon.alt = `Icone da ${icon.split('/').pop().split('.')[0]}`
+    rede_icon.width = 24
+    rede_icon.height = 24
 
     rede_icon.classList.add('icon-svg')
 
@@ -142,7 +145,11 @@ function createCard(rede) {
     card.appendChild(icon_container)
     card.appendChild(card_redes_texts)
 
-    let external_icon = buscarIcones('external-link')
+    let external_icon = document.createElement('img')
+    external_icon.src = "../assets/images/external-icon.svg"
+    external_icon.alt = "Ícone de link externo"
+    external_icon.width = 16
+    external_icon.height = 16
     external_icon.classList.add('external-icon')
     card.appendChild(external_icon)
 
@@ -168,9 +175,15 @@ redes.forEach((rede) => {
     link_rede.target = '_blank'
     link_rede.rel = 'noopener noreferrer'
     if (rede.tipo != 'email') {
-        let icon = buscarIcones(rede.icon)
-        if (icon) {
-            link_rede.appendChild(icon)
+        let img = document.createElement('img')
+        img.src = rede.icon
+        img.alt = rede.nome
+        img.width = 24
+        img.height = 24
+        img.classList.add('icon-footer')
+        link_rede.appendChild(img)
+        if (img) {
+            link_rede.appendChild(img)
         }
         else { link_rede.textContent = configuracaoLink(rede.icon) }
     }
@@ -179,7 +192,7 @@ redes.forEach((rede) => {
 })
 
 /* Adicionar ícone de café no texto do rodapé */
-let coffeeIcon = buscarIcones('coffee')
+let coffeeIcon = buscarIcones('../assets/images/coffee.svg')
 coffeeIcon.classList.add('coffee-icon')
 let footerText = document.querySelector('.section-content')
 footerText.style.textAlign = 'baseline'
@@ -230,9 +243,30 @@ function createProjectCard(project) {
 
     const buttonCard = document.createElement('button')
     buttonCard.classList.add('github')
-    buttonCard.innerHTML = '<i data-lucide="github" aria-label="Github icon"></i>'
-    buttonCard.innerHTML += 'ver no github'
-    buttonCard.innerHTML += `<a href="${project.html_url}" target="_black" rel= "noopener noreferrer"><i class="external" data-lucide="external-link" aria-label="External icon"></i></a>`
+    buttonCard.href = project.html_url
+    buttonCard.target = '_blank'
+    buttonCard.rel = 'noopener noreferrer'
+
+    const githubIcon = document.createElement('img')
+    githubIcon.classList.add('icon-svg')
+    githubIcon.src = "../assets/images/github.svg"
+    githubIcon.alt = "Ícone do Github"
+    githubIcon.width = 24
+    githubIcon.height = 24
+
+    const label = document.createElement('span')
+    label.textContent = 'ver no github'
+
+    const externalIcon = document.createElement('img')
+    externalIcon.src = "../assets/images/external-icon.svg"
+    externalIcon.alt = "Ícone de link externo"
+    externalIcon.width = 16
+    externalIcon.height = 16
+    externalIcon.classList.add('external')
+
+    buttonCard.appendChild(githubIcon)
+    buttonCard.appendChild(label)
+    buttonCard.appendChild(externalIcon)
 
     cardFooter.appendChild(buttonCard)
 
@@ -256,4 +290,4 @@ projetos_in_cards.forEach(project => {
 })
 
 
-lucide.createIcons()
+// lucide.createIcons()

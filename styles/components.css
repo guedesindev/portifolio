@@ -252,16 +252,18 @@
 
 .icon-svg {
     stroke: var(--cyan-bright);
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
 }
 
 .external-icon {
     position: absolute;
-    right: 1rem;
+    right: 2rem;
     color: var(--eletric-blue);
     transition: transform .1s ease-out;
     width: clamp(1rem, 3vw, 1.5rem);
+    stroke-width: 2px;
+    height: clamp(1rem, 3vw, 1.5rem);
 }
 
 .card-redes:hover .external-icon {
@@ -275,6 +277,18 @@
     color: var(--ghost-white);
     margin-left: 2ch;
     transition: 0.3s ease;
+}
+
+a img,
+.icon-svg,
+.external-icon {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(100deg)
+}
+
+a:hover img,
+.icon-svg:hover,
+.external-icon:hover {
+    filter: invert(1) sepia(1) saturate(10) hue-rotate(120deg) drop-shadow(0 0 0.5rem var(--cyan-bright));
 }
 
 

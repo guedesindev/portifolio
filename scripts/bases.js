@@ -1,5 +1,7 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
+const BASE_PATH = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '..' : '/portifolio'
+
 export const skills = [
     { skill: "python", percentage: '85%' },
     { skill: "javascript", percentage: '85%' },
@@ -10,10 +12,13 @@ export const skills = [
 ]
 
 export const redes = [
-    { nome: "linkedin", link: "https://www.linkedin.com/in/fernandoguedesdev", icon: "linkedin" },
-    { nome: "instagram", link: "https://www.instagram.com/devguedes", icon: "instagram" },
-    { nome: "github", link: "https://github.com/guedesindev", icon: "github" },
-    { nome: "email", link: "guedesindev@gmail.com", icon: "mail", tipo: "email" },
+    { nome: "linkedin", link: "https://www.linkedin.com/in/fernandoguedesdev", icon: `${BASE_PATH}/assets/images/linkedin.svg` },
+    { nome: "instagram", link: "https://www.instagram.com/devguedes", icon: `${BASE_PATH}/assets/images/instagram.svg` },
+    { nome: "github", link: "https://github.com/guedesindev", icon: `${BASE_PATH}/assets/images/github.svg` },
+    {
+        nome: "email", link: "guedesindev@gmail.com", icon: `${BASE_PATH}/assets/images/mail.svg`,
+        tipo: "email"
+    }
 ]
 
 
@@ -26,10 +31,10 @@ const response = await octokit.request('GET /users/{username}/repos', {
 });
 
 
-const projetos_relevantes = ['tic-tac-toe', 'Desistalador-inteligente-Python', 'ai_tutor_forge', 'treinador']
+const projetos_relevantes = ['agno', 'Desistalador-inteligente-Python', 'ai_tutor_forge', 'treinador']
 let projetos = {};
 const projetos_in_cards = []
-const BASE_PATH = window.location.hostname === 'localhost' ? '' : '/portifolio'
+
 
 Object(response.data).forEach(project => {
     if (projetos_relevantes.includes(project.name)) {
