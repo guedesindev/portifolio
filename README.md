@@ -30,6 +30,6 @@ Mas o que aprendi a fazer com a IA e que me apeteceu para usar foi desenhar o ba
 
 Estou muito feliz com o resultado do meu projeto e com certeza saí dele com um saldo de conhecimento altamente positivo.
 
-[clique aqui](https://guedesindev.github.io/portifolio/) e acesse o meu resultado.
+[clique aqui](https://guedesindev.github.io/portifolio/) e acesse o meu portifólio.
 
 Espero que também goste 😉
