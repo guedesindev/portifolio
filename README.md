@@ -22,7 +22,9 @@ Então para buscar os projetos no github, pensei em criar objetos com as informa
 
 Com um tempo, fui compartilhar o link do meu portifólio e percebi que os ícones não estavam funcionando, aí percebi que o [lucide](https://lucide.dev/) havia removido, então tive de buscar os ícones em outras fontes, fazer o download para o diretório assets/images e então usar no código, e então decidi remover o `lucide`do meu projeto uma vez que correria o risco de outros ícones pararem de funcionar.
 
-Outra coisa interessante no meu projeto. Não encontrei badges para `Manus`e para `Lucide` então decidi eu mesmo criar esses badges. Para isso tentei aprender a criar os badges com duas bibliotecas python diferentes: Pilow, utilizando a prórpria logo da tecnologia e Anybadge com a logo da marca em svg. Mas o que aprendi a fazer com a IA e que me apeteceu para usar foi desenhar o badge ou a logo no inckscape e copiar o path do svg e com este path utilizar as bibliotecas: sys, re, os e base64. Com isso consegui criar o badges no estilo Shields.io e estão aqui neste README. Me diz você o que achou dos badges que criei para Manus e Lucide.
+Outra coisa interessante no meu projeto. Não encontrei badges para `Manus`e para `Lucide` então decidi eu mesmo criar esses badges. Para isso tentei aprender a criar os badges com duas bibliotecas python diferentes: Pilow, utilizando a prórpria logo da tecnologia e Anybadge com a logo da marca em svg.
+
+Mas o que aprendi a fazer com a IA e que me apeteceu para usar foi desenhar o badge ou a logo no inckscape e copiar o path do svg e com este path utilizar as bibliotecas: sys, re, os e base64. Com isso consegui criar o badges no estilo Shields.io e estão aqui neste README. Me diz você o que achou dos badges que criei para Manus e Lucide.
 
 ## Resultado
 
